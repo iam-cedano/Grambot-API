@@ -9,7 +9,7 @@
         {
             "label": "Run Docker Container",
             "type": "shell",
-            "command": "docker stop grambot-api 2>/dev/null && docker rm grambot-api 2>/dev/null && docker run -d -p 8080:8080 -v $(pwd):/app --name grambot-api grambot-api:latest"
+            "command": "docker stop grambot-api 2>/dev/null; docker rm grambot-api 2>/dev/null; docker run -d -p 8080:8080 -v $(pwd):/app --name grambot-api grambot-api:latest;"
         }
     ]
 }
