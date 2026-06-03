@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Docker Image",
+            "type": "shell",
+            "command": "docker build -t grambot-api:latest ."
+        },
+        {
+            "label": "Run Docker Container",
+            "type": "shell",
+            "command": "docker stop grambot-api 2>/dev/null && docker rm grambot-api 2>/dev/null && docker run -d -p 8080:8080 -v $(pwd):/app --name grambot-api grambot-api:latest"
+        }
+    ]
+}
